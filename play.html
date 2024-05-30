@@ -33,7 +33,7 @@
     // Function to setup JWPlayer with video data
     function setupPlayer(videoData) {
         jwplayer("jwplayerDiv").setup({
-            file: videoData.manifest_url,
+            file: videoData.manifest_url+"?begin=20240525T010000&end=20240531T160000",
             position: 'bottom',
             autostart: true,
             stretching: "",
