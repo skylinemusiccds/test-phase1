@@ -40,9 +40,7 @@
             width: "100%",
             type: "dash",
             drm: {
-                widevine: {
-                    url: "https://universe-cors.deno.dev/"+videoData.license_url,
-                    headers: videoData.manifest_headers || {},
+                clearkeys: {
                     keyId: videoData.clearkeys.keyId,
                     key: videoData.clearkeys.key
                 }
