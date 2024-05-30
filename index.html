@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>Cinemad TV</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    <meta name="9475f2dbe451270d183769ea003da792ff72cbc2" content="9475f2dbe451270d183769ea003da792ff72cbc2" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        #jtvh1 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            font-family: 'Holtwood One SC', serif !important;
+        }
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            justify-content: center;
+            display:flex;
+            align-items:center;
+           
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f50057; /* Pink color */
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             position:relative;
+            left:40%;
+        }
+
+        .navbar-brand span {
+            color: #ff6f00; /* Orange color */
+        }
+
+       
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .search {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #search, #groupSelect {
+            width: 100%;
+            max-width: 400px;
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            width: 180px;
+            height: 220px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+        }
+        .card img {
+            width: 90%;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .info span {
+            font-size: 15px;
+            color: black;
+        }
+        .load-more-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .load-more-btn:hover {
+            background-color: #0056b3;
+        }
+        @media only screen and (max-width: 1200px) {
+            .card {
+                width: 150px;
+                height: 150px;
+            }
+            .card img {
+                width: 80%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+            .info span {
+                font-size: 13px;
+                color: black;
+            }
+        }
+        @media only screen and (max-width: 992px) {
+            .card {
+                width: 150px;
+                height: 150px;
+            }
+            .card img {
+                width: 70%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+            .navbar-brand {
+           
+             position:relative;
+            left:25%;
+        }
+        }
+        @media only screen and (max-width: 768px) {
+            .card {
+                width: 150px;
+                height: 150px;
+            }
+            .card img {
+                width: 60%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+        }
+        @media only screen and (max-width: 576px) {
+            .card {
+                width: 150px;
+                height: 150px;
+            }
+            .navbar-brand {
+           
+             position:relative;
+            left:25%;
+        }
+            .card img {
+                width: 50%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="https://madstream.in/">Cinemad <span>TV</span></a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="search">
+            <input id="search" type="text" placeholder="Search Your Channel">
+            <select id="groupSelect">
+                <option value="">All</option>
+                <option value="HD">HD Channels</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Movies">Movies</option>
+                <option value="Music">Music</option>
+                <option value="News">News</option>
+                <option value="Kids">Kids</option>
+                <option value="Knowledge">Knowledge</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Bengali">Regional Bengali</option>
+                <option value="Gujarati">Regional Gujarati</option>
+                <option value="Hindi">Regional Hindi</option>
+                <option value="Kannada">Regional Kannada</option>
+                <option value="Malayalam">Regional Malayalam</option>
+                <option value="Marathi">Regional Marathi</option>
+                <option value="Odia">Regional Odia</option>
+                <option value="Others">Regional Others</option>
+                <option value="Punjabi">Regional Punjabi</option>
+                <option value="Tamil">Regional Tamil</option>
+                <option value="Telugu">Regional Telugu</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Spiritual">Spiritual</option>
+                <option value="Null">Others</option>
+                <option value="Sports">Sports</option>
+            </select>
+        </div>
+    </div>
+    <div id="content" class="container"></div>
+    <div id="playlist" class="row"></div>
+    <button id="loadMoreBtn" class="load-more-btn">Load More</button>
+
+    <script>
+        fetch("https://universe-cors.deno.dev/https://universe-playlist.deno.dev/playlist.json")
+            .then(response => response.json())
+            .then(playlist => {
+                const playlistDiv = document.getElementById("playlist");
+                const loadMoreBtn = document.getElementById("loadMoreBtn");
+                const searchInput = document.getElementById("search");
+                const selectElement = document.getElementById("groupSelect");
+                const itemsPerPage = 30;
+                let currentPage = 1;
+                let currentGroup = '';
+                let currentSearch = '';
+
+                const renderItems = (items) => {
+                    items.forEach(item => {
+                        const columnDiv = document.createElement("div");
+                        columnDiv.classList.add("col-6", "col-sm-4", "col-md-3", "col-lg-2");
+                        const cardLink = document.createElement("a");
+                        cardLink.href = `play.html?id=${item.id}`; // Changed link to play.html
+                        cardLink.target = "_blank";
+                        const cardDiv = document.createElement("div");
+                        cardDiv.classList.add("card");
+
+                        const logoImg = document.createElement("img");
+                        logoImg.src = item.logo;
+                        cardDiv.appendChild(logoImg);
+
+                        const infoDiv = document.createElement("div");
+                        infoDiv.classList.add("info");
+
+                        const nameSpan = document.createElement("span");
+                        nameSpan.textContent = item.name;
+                        infoDiv.appendChild(nameSpan);
+
+                        cardDiv.appendChild(infoDiv);
+                        cardLink.appendChild(cardDiv);
+                        columnDiv.appendChild(cardLink);
+                        playlistDiv.appendChild(columnDiv);
+                    });
+                };
+
+                const filterAndRender = (clear = true) => {
+                    if (clear) {
+                        playlistDiv.innerHTML = '';
+                        currentPage = 1;
+                    }
+
+                    const filteredPlaylist = playlist.filter(item => {
+                        const matchesGroup = !currentGroup || item.group === currentGroup;
+                        const matchesSearch = !currentSearch || item.name.toLowerCase().includes(currentSearch);
+                        return matchesGroup && matchesSearch;
+                    });
+
+                    const startIndex = (currentPage - 1) * itemsPerPage;
+                    const endIndex = startIndex + itemsPerPage;
+
+                    renderItems(filteredPlaylist.slice(startIndex, endIndex));
+
+                    if (currentPage * itemsPerPage >= filteredPlaylist.length) {
+                        loadMoreBtn.style.display = "none";
+                    } else {
+                        loadMoreBtn.style.display = "block";
+                    }
+                };
+
+                loadMoreBtn.addEventListener("click", () => {
+                    currentPage++;
+                    filterAndRender(false);
+                });
+
+                searchInput.addEventListener("input", () => {
+                    currentSearch = searchInput.value.toLowerCase();
+                    filterAndRender();
+                });
+
+                selectElement.addEventListener("change", (event) => {
+                    currentGroup = event.target.value;
+                    filterAndRender();
+                });
+
+                filterAndRender();
+            })
+            .catch(error => console.error(error));
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
