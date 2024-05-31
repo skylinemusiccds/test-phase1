@@ -12,7 +12,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://universe-playlist.deno.dev/playlist.json')
+            fetch('https://universe-cors.deno.dev/https://universe-playlist.deno.dev/playlist.json')
                 .then(response => response.json())
                 .then(data => {
                     const contentDiv = document.getElementById('content');
