@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channels</title>
+    <style src="Style.css"></style>
+</head>
+<body>
+    <h1>Channels</h1>
+    <div id="content"></div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://universe-playlist.deno.dev/playlist.json')
+                .then(response => response.json())
+                .then(data => {
+                    const contentDiv = document.getElementById('content');
+                    data.forEach(channel => {
+                        const channelDiv = document.createElement('div');
+                        channelDiv.className = 'channel';
+                        const channelLink = document.createElement('a');
+                        channelLink.href = channel.name + '.html';
+                        channelLink.textContent = channel.name;
+                        channelDiv.appendChild(channelLink);
+                        contentDiv.appendChild(channelDiv);
+                    });
+                })
+                .catch(error => console.error('Error fetching the channel list:', error));
+        });
+    </script>
+</body>
+</html>
